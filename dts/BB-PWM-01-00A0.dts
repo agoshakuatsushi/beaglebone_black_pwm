@@ -32,5 +32,22 @@
 			status = "okay";
 		};
 	};
+
+	fragment@3 {
+		target = <&ocp>;
+		__overlay__ {
+
+			pwm_test0 {
+				compatible = "pwm_test";
+				pinctrl-names = "default";
+				pinctrl-0 = <&pinmux_ehrpwm0_pins>;
+				pwms = <&ehrpwm0 0 0 0>;
+				pwm-names = "Pwm Test0";
+				enabled = <1>;
+				duty = <0>;
+				status = "okay";
+			};
+		};
+	};
 };
 
