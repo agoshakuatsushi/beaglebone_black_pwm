@@ -17,12 +17,12 @@
  *     cap0
  *         P9.42
  *
- * epwmss1
+ * [epwmss1]
  *     ehrpwm1
  *         A P8.36 | P9.14
  *         B P8.34 | P9.16
  *
- * [epwmss2]
+ * epwmss2
  *     ehrpwm2
  *         A P8.19 | P8.45
  *         B P8.13 | P8.46
@@ -37,11 +37,11 @@
 	compatible = "ti,beaglebone","ti,beaglebone-black";
 
 	/* Identification */
-	part-number = "sc_pwm_EPWMSS2";
+	part-number = "BB-EPWMSS1";
 	version = "00A0";
 
 	fragment@0 {
-		target = <&epwmss2>;
+		target = <&epwmss1>;
 		__overlay__ {
 			status = "okay";
 		};

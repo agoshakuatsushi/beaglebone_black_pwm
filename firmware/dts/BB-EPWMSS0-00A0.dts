@@ -10,8 +10,8 @@
 /* ****************************************************************************
  * Pulse-width Modulation Subsystem 
  *
- * epwmss0
- *     [ehrpwm0]
+ * [epwmss0]
+ *     ehrpwm0
  *         A P9.22 | P9.31
  *         B P9.21 | P9.29
  *     cap0
@@ -37,11 +37,11 @@
 	compatible = "ti,beaglebone","ti,beaglebone-black";
 
 	/* Identification */
-	part-number = "sc_pwm_EHRPWM0";
+	part-number = "BB-EPWMSS0";
 	version = "00A0";
 
 	fragment@0 {
-		target = <&ehrpwm0>;
+		target = <&epwmss0>;
 		__overlay__ {
 			status = "okay";
 		};
